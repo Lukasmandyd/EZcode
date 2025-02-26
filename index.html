@@ -5,189 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>EZCode Language Documentation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <div class="logo">EZCode Language</div>
-        <nav class="nav-desktop">
-            <ul>
-                <li><a href="#intro">Introduction</a></li>
-                <li><a href="#file-format">File Format</a></li>
-                <li><a href="#syntax">Basic Syntax</a></li>
-                <li><a href="#control-flow">Control Flow</a></li>
-                <li><a href="#game-mechanics">Game Mechanics</a></li>
-                <li><a href="#advanced-features">Advanced Features</a></li>
-                <li><a href="#error-handling">Error Handling</a></li>
-                <li><a href="#game-engine">Game Engine Integration</a></li>
-                <li><a href="#saving-loading">Saving and Loading Data</a></li>
-                <li><a href="#getting-started">Getting Started</a></li>
-                <li><a href="#next-steps">Next Steps</a></li>
-            </ul>
-        </nav>
-        <div class="dropdown">
-            <button class="dropbtn">Menu</button>
-            <div class="dropdown-content">
-                <a href="#intro">Introduction</a>
-                <a href="#file-format">File Format</a>
-                <a href="#syntax">Basic Syntax</a>
-                <a href="#control-flow">Control Flow</a>
-                <a href="#game-mechanics">Game Mechanics</a>
-                <a href="#advanced-features">Advanced Features</a>
-                <a href="#error-handling">Error Handling</a>
-                <a href="#game-engine">Game Engine Integration</a>
-                <a href="#saving-loading">Saving and Loading Data</a>
-                <a href="#getting-started">Getting Started</a>
-                <a href="#next-steps">Next Steps</a>
+        <div class="container">
+            <div class="logo">EZCode</div>
+            <nav class="nav-desktop">
+                <ul>
+                    <li><a href="#intro">Introduction</a></li>
+                    <li><a href="#file-format">File Format</a></li>
+                    <li><a href="#syntax">Basic Syntax</a></li>
+                    <li><a href="#control-flow">Control Flow</a></li>
+                    <li><a href="#game-mechanics">Game Mechanics</a></li>
+                    <li><a href="#advanced-features">Advanced Features</a></li>
+                    <li><a href="#error-handling">Error Handling</a></li>
+                    <li><a href="#game-engine">Game Engine</a></li>
+                    <li><a href="#saving-loading">Saving/Loading</a></li>
+                    <li><a href="#getting-started">Getting Started</a></li>
+                    <li><a href="#next-steps">Next Steps</a></li>
+                </ul>
+            </nav>
+            <div class="dropdown">
+                <button class="dropbtn">Menu</button>
+                <div class="dropdown-content">
+                    <a href="#intro">Introduction</a>
+                    <a href="#file-format">File Format</a>
+                    <a href="#syntax">Basic Syntax</a>
+                    <a href="#control-flow">Control Flow</a>
+                    <a href="#game-mechanics">Game Mechanics</a>
+                    <a href="#advanced-features">Advanced Features</a>
+                    <a href="#error-handling">Error Handling</a>
+                    <a href="#game-engine">Game Engine</a>
+                    <a href="#saving-loading">Saving/Loading</a>
+                    <a href="#getting-started">Getting Started</a>
+                    <a href="#next-steps">Next Steps</a>
+                </div>
             </div>
         </div>
     </header>
 
     <main>
-        <section id="intro">
-            <h1>Introduction</h1>
-            <pre><code>EZCode is a high-level scripting language designed to be as simple and easy to understand as possible. It aims to make programming accessible to everyone, with an intuitive syntax that is readable and straightforward. This makes it perfect for beginners and non-programmers, while still being powerful enough to create complex applications, games, and more.</code></pre>
-        </section>
+        <div class="container">
+            <section id="intro">
+                <h1>Introduction</h1>
+                <pre><code>EZCode is a high-level scripting language designed to be simple and easy to understand...</code></pre>
+            </section>
 
-        <section id="file-format">
-            <h1>File Format</h1>
-            <pre><code>File Extension: .ez
-Example File: game.ez
+            <section id="file-format">
+                <h1>File Format</h1>
+                <pre><code>File Extension: .ez
+Example File: game.ez</code></pre>
+            </section>
 
-EZCode files are plain text files that can be opened and edited with any text editor, such as Notepad or Visual Studio Code.</code></pre>
-        </section>
-
-        <section id="syntax">
-            <h1>Basic Syntax</h1>
-            <h2>Statements and Commands</h2>
-            <pre><code>create object at 100, 200
+            <section id="syntax">
+                <h1>Basic Syntax</h1>
+                <h2>Statements and Commands</h2>
+                <pre><code>create object at 100, 200
 move object right by 10</code></pre>
 
-            <h2>Variables</h2>
-            <pre><code>set player_health to 100
+                <h2>Variables</h2>
+                <pre><code>set player_health to 100
 set player_name to "Hero"</code></pre>
 
-            <h2>Functions</h2>
-            <pre><code>function say_hello
+                <h2>Functions</h2>
+                <pre><code>function say_hello
     print "Hello, World!"
 end function
 
 call say_hello</code></pre>
 
-            <h2>Comments</h2>
-            <pre><code>// This is a comment
+                <h2>Comments</h2>
+                <pre><code>// This is a comment
 set player_health to 100 // Setting initial health</code></pre>
-        </section>
+            </section>
 
-        <section id="control-flow">
-            <h1>Control Flow</h1>
-            <h2>If-Else Conditions</h2>
-            <pre><code>if player_health <= 0
+            <section id="control-flow">
+                <h1>Control Flow</h1>
+                <h2>If-Else Conditions</h2>
+                <pre><code>if player_health <= 0
     print "Game Over"
 else
     print "You are still alive"
 end if</code></pre>
+            </section>
 
-            <h2>Loops</h2>
-            <h3>For Loop:</h3>
-            <pre><code>for i from 1 to 10
-    print i
-end for</code></pre>
+            <!-- Add other sections similarly -->
 
-            <h3>Repeat Forever Loop:</h3>
-            <pre><code>repeat forever
-    move player up by 5
-end repeat</code></pre>
-        </section>
-
-        <section id="game-mechanics">
-            <h1>Basic Game Mechanics</h1>
-            <h2>Creating Objects</h2>
-            <pre><code>create player at 100, 150
-create enemy at 200, 150</code></pre>
-
-            <h2>Moving Objects</h2>
-            <pre><code>move player up by 5
-move enemy left by 5</code></pre>
-
-            <h2>Interaction Between Objects</h2>
-            <pre><code>if player collides with enemy
-    set player_health to player_health - 10
-end if</code></pre>
-
-            <h2>Printing Messages</h2>
-            <pre><code>print "Game Started!"</code></pre>
-        </section>
-
-        <section id="advanced-features">
-            <h1>Advanced Features</h1>
-            <h2>Functions and Parameters</h2>
-            <pre><code>function add_numbers with a, b
-    return a + b
-end function
-
-set result to call add_numbers with 5, 10
-print result</code></pre>
-
-            <h2>Arrays (Lists)</h2>
-            <pre><code>set scores to [10, 20, 30, 40]
-set first_score to scores[0]</code></pre>
-
-            <h2>Random Numbers</h2>
-            <pre><code>set random_number to random between 1 and 100</code></pre>
-        </section>
-
-        <section id="error-handling">
-            <h1>Error Handling</h1>
-            <pre><code>try
-    set result to divide 10 by 0
-catch error
-    print "Error: Division by zero"
-end try</code></pre>
-        </section>
-
-        <section id="game-engine">
-            <h1>Game Engine Integration</h1>
-            <h2>Creating and Moving Objects</h2>
-            <pre><code>create sprite "player" at 100, 100
-move sprite "player" left by 5</code></pre>
-
-            <h2>Playing Sounds</h2>
-            <pre><code>play sound "explosion.wav"</code></pre>
-
-            <h2>Checking Collisions</h2>
-            <pre><code>if sprite "player" collides with sprite "enemy"
-    print "Game Over!"
-end if</code></pre>
-        </section>
-
-        <section id="saving-loading">
-            <h1>Saving and Loading Data</h1>
-            <h2>Saving Data</h2>
-            <pre><code>save data "player_data.txt" as player_name, player_health</code></pre>
-
-            <h2>Loading Data</h2>
-            <pre><code>load data "player_data.txt" into player_name, player_health</code></pre>
-        </section>
-
-        <section id="getting-started">
-            <h1>Getting Started</h1>
-            <pre><code>Download EZCode interpreter or compiler from the official site.
-Create a new .ez file and open it with any text editor.
-Write your first program, such as printing "Hello, World!", and run it!</code></pre>
-        </section>
-
-        <section id="next-steps">
-            <h1>Next Steps</h1>
-            <pre><code>Create simple games like Tetris or Snake.
-Explore the advanced features and integrate your game with graphics and sound.
-Join the EZCode community to share your work and get feedback.</code></pre>
-        </section>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2025 EZCode. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2025 EZCode. All rights reserved.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>

@@ -1,52 +1,66 @@
-/* General Styling */
+/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Global Styling */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7fa;
     color: #333;
 }
 
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Header */
 header {
-    background: #333;
+    background: #1e2a47;
     color: white;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 100;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 header .logo {
     font-size: 1.8em;
-    font-weight: bold;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 header nav ul {
+    list-style: none;
     display: flex;
-    list-style-type: none;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 header nav ul li {
-    margin-left: 20px;
+    margin: 0 20px;
 }
 
 header nav ul li a {
     color: white;
     text-decoration: none;
-    padding: 5px 10px;
-    transition: background 0.3s;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
 }
 
 header nav ul li a:hover {
-    background-color: #555;
+    background-color: #3c4b7b;
 }
 
 header .dropdown {
@@ -56,28 +70,27 @@ header .dropdown {
 header .dropdown-content {
     display: none;
     position: absolute;
-    top: 50px;
+    top: 70px;
     right: 0;
-    background-color: #333;
+    background-color: #1e2a47;
     min-width: 150px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
 }
 
 header .dropdown-content a {
     color: white;
-    padding: 10px;
+    padding: 12px;
     text-decoration: none;
     display: block;
 }
 
 header .dropdown-content a:hover {
-    background-color: #555;
+    background-color: #3c4b7b;
 }
 
-/* Mobile */
+/* Mobile View */
 @media (max-width: 768px) {
-    header nav {
+    header nav ul {
         display: none;
     }
 
@@ -89,40 +102,39 @@ header .dropdown-content a:hover {
         display: block;
     }
 
-    header nav ul {
-        display: block;
-        width: 100%;
+    header nav ul li {
+        margin: 5px 0;
     }
 }
 
 /* Main Content */
 main {
-    margin-top: 70px;
-    padding: 20px;
-}
-
-h1 {
-    color: #333;
-    margin-bottom: 10px;
+    padding: 40px 0;
 }
 
 pre {
     background-color: #2d2d2d;
     color: #f1f1f1;
-    padding: 15px;
-    border-radius: 5px;
+    padding: 20px;
+    border-radius: 10px;
     overflow-x: auto;
+    font-family: 'Source Code Pro', monospace;
 }
 
 code {
-    font-family: "Courier New", Courier, monospace;
+    font-family: 'Source Code Pro', monospace;
 }
 
 /* Footer */
 footer {
-    text-align: center;
-    background-color: #333;
+    background-color: #1e2a47;
     color: white;
-    padding: 10px;
-    margin-top: 20px;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
 }
