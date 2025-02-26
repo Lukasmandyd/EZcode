@@ -1,11 +1,4 @@
-/* Reset CSS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Global Styling */
+/* Global Styles */
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f4f7fa;
@@ -24,7 +17,20 @@ h1, h2 {
     margin-bottom: 10px;
 }
 
-/* Header */
+pre {
+    background-color: #2d2d2d;
+    color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-x: auto;
+    font-family: 'Source Code Pro', monospace;
+}
+
+code {
+    font-family: 'Source Code Pro', monospace;
+}
+
+/* Header Styles */
 header {
     background: #1e2a47;
     color: white;
@@ -101,40 +107,28 @@ header .dropdown-content a:hover {
     header .dropdown-content {
         display: block;
     }
-
-    header nav ul li {
-        margin: 5px 0;
-    }
 }
 
-/* Main Content */
-main {
-    padding: 40px 0;
+/* Button Styles */
+.copy-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
-pre {
-    background-color: #2d2d2d;
-    color: #f1f1f1;
-    padding: 20px;
-    border-radius: 10px;
-    overflow-x: auto;
-    font-family: 'Source Code Pro', monospace;
+.copy-btn:hover {
+    background-color: #45a049;
 }
 
-code {
-    font-family: 'Source Code Pro', monospace;
-}
-
-/* Footer */
+/* Footer Styles */
 footer {
     background-color: #1e2a47;
     color: white;
     text-align: center;
     padding: 20px;
     margin-top: 40px;
-}
-
-/* Smooth Scroll */
-html {
-    scroll-behavior: smooth;
 }
