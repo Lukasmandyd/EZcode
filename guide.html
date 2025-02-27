@@ -40,6 +40,63 @@ repeat 5 times
 end repeat
         </pre>
 
+        <h2>UI Elements</h2>
+        <h3>Creating a Button</h3>
+        <pre>
+create button "Click Me" at 100, 200
+when button "Click Me" is clicked
+    write "Button was clicked!"
+end when
+        </pre>
+
+        <h3>Playing Sounds</h3>
+        <pre>
+create sound "beep" from "beep.mp3"
+play sound "beep"
+        </pre>
+
+        <h2>Game Development</h2>
+        <h3>Creating a Window</h3>
+        <pre>
+create window "My Game" size 800, 600
+set background color to "skyblue"
+        </pre>
+
+        <h3>Adding a Player</h3>
+        <pre>
+create sprite "player" from "player.png" at 100, 100
+        </pre>
+
+        <h3>Handling Movement</h3>
+        <pre>
+when key "W" is pressed
+    move "player" up 5
+end when
+        </pre>
+
+        <h2>Advanced Features</h2>
+        <h3>Importing Modules</h3>
+        <pre>
+add module "math"
+set y to use sqrt from math with 25
+write y
+        </pre>
+
+        <h3>Creating a Server</h3>
+        <pre>
+create server at port 8080
+on request
+    send response "Hello from EZCode Server!"
+end on
+        </pre>
+
+        <h2>Debugging & Errors</h2>
+        <ul>
+            <li>If you get an "Invalid Syntax" error, check for missing keywords.</li>
+            <li>Ensure all conditions and loops have <code>end if</code> or <code>end repeat</code>.</li>
+            <li>Use <code>write</code> statements to debug variable values.</li>
+        </ul>
+
         <br>
         <a href="index.html" class="back">⬅ Back to Home</a>
     </main>
