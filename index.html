@@ -11,163 +11,171 @@
     <header>
         <h1>EZCode Language Documentation</h1>
     </header>
-    
+
     <div class="container">
-        <section id="section-1">
+        <section id="introduction">
             <h2>1. Introduction</h2>
             <p>EZCode is a high-level scripting language designed to be as simple and easy to understand as possible. It aims to make programming accessible to everyone, with an intuitive syntax that is readable and straightforward. This makes it perfect for beginners and non-programmers, while still being powerful enough to create complex applications, games, and more.</p>
         </section>
 
-        <section id="section-2">
+        <section id="file-format">
             <h2>2. File Format</h2>
             <p><strong>File Extension:</strong> .ez</p>
             <p><strong>Example File:</strong> game.ez</p>
             <p>EZCode files are plain text files that can be opened and edited with any text editor, such as Notepad or Visual Studio Code.</p>
         </section>
 
-        <section id="section-3">
+        <section id="basic-syntax">
             <h2>3. Basic Syntax</h2>
+            <p>EZCode uses a natural language syntax, which means it tries to read like English. Below is a list of basic syntax elements:</p>
 
-            <section id="section-3-1">
-                <h3>3.1 Statements and Commands</h3>
-                <pre id="code1"><code>create object at 100, 200
+            <h3>3.1. Statements and Commands</h3>
+            <p>All commands are written in plain English. No semicolons or complex punctuation are needed (just simple line breaks between statements).</p>
+            <pre><code>create object at 100, 200
 move object right by 10</code></pre>
-                <button class="copy-btn" data-clipboard-target="#code1">Copy</button>
-            </section>
 
-            <section id="section-3-2">
-                <h3>3.2 Variables</h3>
-                <pre id="code2"><code>set player_health to 100
+            <h3>3.2. Variables</h3>
+            <p>EZCode allows the use of variables to store and manipulate data.</p>
+            <pre><code>set player_health to 100
 set player_name to "Hero"</code></pre>
-                <button class="copy-btn" data-clipboard-target="#code2">Copy</button>
-            </section>
 
-            <section id="section-3-3">
-                <h3>3.3 Functions</h3>
-                <pre id="code3"><code>function say_hello
+            <h3>3.3. Functions</h3>
+            <p>EZCode supports defining functions that allow for code reuse.</p>
+            <pre><code>function say_hello
     print "Hello, World!"
 end function
 
 call say_hello</code></pre>
-                <button class="copy-btn" data-clipboard-target="#code3">Copy</button>
-            </section>
 
-            <section id="section-3-4">
-                <h3>3.4 Comments</h3>
-                <pre id="code4"><code>// This is a comment
+            <h3>3.4. Comments</h3>
+            <p>To make your code more readable, you can add comments. Comments are ignored by the interpreter and are for human readers only.</p>
+            <pre><code>// This is a comment
 set player_health to 100 // Setting initial health</code></pre>
-                <button class="copy-btn" data-clipboard-target="#code4">Copy</button>
-            </section>
         </section>
 
-        <section id="section-4">
+        <section id="control-flow">
             <h2>4. Control Flow</h2>
+            <p>EZCode allows for basic control flow constructs like if-else conditions, loops, and repeats.</p>
 
-            <section id="section-4-1">
-                <h3>4.1 If-Else Conditions</h3>
-                <pre id="code5"><code>if player_health <= 0
+            <h3>4.1. If-Else Conditions</h3>
+            <pre><code>if player_health <= 0
     print "Game Over"
 else
     print "You are still alive"
 end if</code></pre>
-                <button class="copy-btn" data-clipboard-target="#code5">Copy</button>
-            </section>
 
-            <section id="section-4-2">
-                <h3>4.2 Loops</h3>
-
-                <h4>4.2.1 For Loop</h4>
-                <pre id="code6"><code>for i from 1 to 10
+            <h3>4.2. Loops</h3>
+            <p><strong>For Loop:</strong></p>
+            <pre><code>for i from 1 to 10
     print i
 end for</code></pre>
-                <button class="copy-btn" data-clipboard-target="#code6">Copy</button>
 
-                <h4>4.2.2 Repeat Forever Loop</h4>
-                <pre id="code7"><code>repeat forever
+            <p><strong>Repeat Forever Loop:</strong></p>
+            <pre><code>repeat forever
     move player up by 5
 end repeat</code></pre>
-                <button class="copy-btn" data-clipboard-target="#code7">Copy</button>
-            </section>
         </section>
 
-        <section id="section-5">
+        <section id="basic-game-mechanics">
             <h2>5. Basic Game Mechanics</h2>
 
-            <section id="section-5-1">
-                <h3>5.1 Creating Objects</h3>
-                <pre id="code8"><code>create player at 100, 150
+            <h3>5.1. Creating Objects</h3>
+            <pre><code>create player at 100, 150
 create enemy at 200, 150</code></pre>
-                <button class="copy-btn" data-clipboard-target="#code8">Copy</button>
-            </section>
 
-            <section id="section-5-2">
-                <h3>5.2 Moving Objects</h3>
-                <pre id="code9"><code>move player up by 5
+            <h3>5.2. Moving Objects</h3>
+            <pre><code>move player up by 5
 move enemy left by 5</code></pre>
-                <button class="copy-btn" data-clipboard-target="#code9">Copy</button>
-            </section>
 
-            <section id="section-5-3">
-                <h3>5.3 Interaction Between Objects</h3>
-                <pre id="code10"><code>if player collides with enemy
+            <h3>5.3. Interaction Between Objects</h3>
+            <pre><code>if player collides with enemy
     set player_health to player_health - 10
 end if</code></pre>
-                <button class="copy-btn" data-clipboard-target="#code10">Copy</button>
-            </section>
 
-            <section id="section-5-4">
-                <h3>5.4 Printing Messages</h3>
-                <pre id="code11"><code>print "Game Started!"</code></pre>
-                <button class="copy-btn" data-clipboard-target="#code11">Copy</button>
-            </section>
+            <h3>5.4. Printing Messages</h3>
+            <pre><code>print "Game Started!"</code></pre>
         </section>
 
-        <section id="section-6">
+        <section id="advanced-features">
             <h2>6. Advanced Features</h2>
 
-            <section id="section-6-1">
-                <h3>6.1 Functions and Parameters</h3>
-                <pre id="code12"><code>function add_numbers with a, b
+            <h3>6.1. Functions and Parameters</h3>
+            <pre><code>function add_numbers with a, b
     return a + b
-end function</code></pre>
-                <button class="copy-btn" data-clipboard-target="#code12">Copy</button>
-            </section>
+end function
+
+set result to call add_numbers with 5, 10
+print result</code></pre>
+
+            <h3>6.2. Arrays (Lists)</h3>
+            <pre><code>set scores to [10, 20, 30, 40]
+set first_score to scores[0]</code></pre>
+
+            <h3>6.3. Random Numbers</h3>
+            <pre><code>set random_number to random between 1 and 100</code></pre>
         </section>
 
-        <section id="section-7">
+        <section id="error-handling">
             <h2>7. Error Handling</h2>
-            <pre id="code15"><code>try
+            <pre><code>try
     set result to divide 10 by 0
 catch error
     print "Error: Division by zero"
 end try</code></pre>
-            <button class="copy-btn" data-clipboard-target="#code15">Copy</button>
         </section>
 
-        <section id="section-8">
+        <section id="game-engine-integration">
             <h2>8. Game Engine Integration</h2>
+
+            <h3>8.1. Creating and Moving Objects</h3>
+            <pre><code>create sprite "player" at 100, 100
+move sprite "player" left by 5</code></pre>
+
+            <h3>8.2. Playing Sounds</h3>
+            <pre><code>play sound "explosion.wav"</code></pre>
+
+            <h3>8.3. Checking Collisions</h3>
+            <pre><code>if sprite "player" collides with sprite "enemy"
+    print "Game Over!"
+end if</code></pre>
         </section>
 
-        <section id="section-9">
+        <section id="saving-loading">
             <h2>9. Saving and Loading Data</h2>
+
+            <h3>9.1. Saving Data</h3>
+            <pre><code>save data "player_data.txt" as player_name, player_health</code></pre>
+
+            <h3>9.2. Loading Data</h3>
+            <pre><code>load data "player_data.txt" into player_name, player_health</code></pre>
         </section>
 
-        <section id="section-10">
+        <section id="additional-notes">
             <h2>10. Additional Notes</h2>
+            <ul>
+                <li>EZCode is constantly evolving, so new features will be added over time.</li>
+                <li>Keep your code simple: EZCode is designed to be beginner-friendly, so avoid overly complex logic or syntax.</li>
+                <li>Join the community: Ask for help on forums, Discord servers, or social media if you get stuck with your EZCode projects.</li>
+            </ul>
         </section>
 
-        <section id="section-11">
+        <section id="getting-started">
             <h2>11. Getting Started</h2>
+            <ul>
+                <li>Download EZCode interpreter or compiler from the official site.</li>
+                <li>Create a new .ez file and open it with any text editor.</li>
+                <li>Write your first program, such as printing "Hello, World!", and run it!</li>
+            </ul>
         </section>
 
-        <section id="section-12">
+        <section id="next-steps">
             <h2>12. Next Steps</h2>
+            <ul>
+                <li>Create simple games like Tetris or Snake.</li>
+                <li>Explore the advanced features and integrate your game with graphics and sound.</li>
+                <li>Join the EZCode community to share your work and get feedback.</li>
+            </ul>
         </section>
     </div>
-
-    <script>
-        // Initialize Clipboard.js
-        new ClipboardJS('.copy-btn');
-    </script>
 </body>
 </html>
