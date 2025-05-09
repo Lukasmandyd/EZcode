@@ -1,59 +1,146 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f4f4f4;
+/* === Root Variables & Global Styles === */
+:root {
+    /* Color Palette */
+    --primary-color: #007BFF;
+    --primary-hover-color: #0056b3;
+    --secondary-color: #6c757d; /* Example for other elements if needed */
+    --light-color: #ffffff;
+    --dark-text-color: #333;
+    --body-bg-color: #f4f4f4;
+    --code-bg-color: #222;
+    --code-text-color: limegreen;
+
+    /* Typography */
+    --font-family-sans: Arial, "Helvetica Neue", Helvetica, sans-serif; /* More robust stack */
+    --font-family-monospace: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; /* For code */
+
+    /* Sizing & Spacing */
+    --base-font-size: 16px; /* Used for rem calculations */
+    --spacing-unit: 1rem; /* approx 16px */
+    --border-radius: 5px;
+
+    /* Transitions */
+    --transition-speed: 0.2s;
+    --transition-timing: ease-in-out;
+}
+
+/* Basic Reset & Box Sizing */
+html {
+    font-size: var(--base-font-size); /* Set base for rem units */
+    box-sizing: border-box; /* Makes width/height include padding and border */
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit; /* Inherit box-sizing from html */
     margin: 0;
     padding: 0;
 }
 
-header {
-    padding: 50px;
-    background: #007BFF;
-    color: white;
+body {
+    font-family: var(--font-family-sans);
+    text-align: center; /* Retained from original, but consider if a container should be centered instead */
+    background-color: var(--body-bg-color);
+    color: var(--dark-text-color);
+    line-height: 1.6; /* Improved readability */
+    padding: 0; /* Margin already handled by '*' reset */
 }
 
+/* === Header === */
+header {
+    padding: calc(var(--spacing-unit) * 3) var(--spacing-unit); /* 48px 16px (approx) */
+    background: var(--primary-color);
+    color: var(--light-color);
+    margin-bottom: calc(var(--spacing-unit) * 2); /* Space below header */
+}
+
+/* === Typography === */
 h1 {
-    margin: 0;
+    /* margin: 0; already handled by '*' reset */
+    font-size: 2.5rem; /* ~40px */
+    margin-bottom: 0.5em; /* Relative to h1's font size */
 }
 
 p {
-    font-size: 18px;
+    font-size: 1.125rem; /* 18px */
+    margin-bottom: var(--spacing-unit); /* Space below paragraphs */
 }
 
+/* === Buttons === */
 .btn {
     display: inline-block;
-    background: white;
-    color: #007BFF;
-    padding: 10px 20px;
+    background: var(--light-color);
+    color: var(--primary-color);
+    padding: calc(var(--spacing-unit) * 0.625) calc(var(--spacing-unit) * 1.25); /* 10px 20px */
     text-decoration: none;
-    font-size: 20px;
-    border-radius: 5px;
-    margin: 10px;
-    border: 2px solid #007BFF;
+    font-size: 1.25rem; /* 20px */
+    font-weight: bold; /* Buttons usually have bolder text */
+    border-radius: var(--border-radius);
+    margin: var(--spacing-unit);
+    border: 2px solid var(--primary-color);
+    cursor: pointer;
+    transition: background-color var(--transition-speed) var(--transition-timing),
+                color var(--transition-speed) var(--transition-timing),
+                border-color var(--transition-speed) var(--transition-timing);
 }
 
-.btn:hover {
-    background: #0056b3;
-    color: white;
+.btn:hover,
+.btn:focus { /* Added focus state for accessibility */
+    background: var(--primary-hover-color);
+    color: var(--light-color);
+    border-color: var(--primary-hover-color); /* Match background on hover */
+    outline: none; /* Remove default browser outline if custom focus is preferred */
+}
+/* Optional: for better keyboard navigation visibility if default outline is removed */
+.btn:focus-visible {
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Example focus ring */
 }
 
+
+/* === Code Blocks === */
 pre {
-    background: #222;
-    color: limegreen;
-    padding: 10px;
-    display: inline-block;
+    background: var(--code-bg-color);
+    color: var(--code-text-color);
+    font-family: var(--font-family-monospace);
+    padding: var(--spacing-unit);
+    display: inline-block; /* Consider `block` if it should take full width */
     text-align: left;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
+    overflow-x: auto; /* Handle long lines of code */
+    max-width: 100%; /* Prevent overflow on small screens if display:block */
+    margin-bottom: var(--spacing-unit); /* Space below code blocks */
+    font-size: 0.9rem; /* Slightly smaller for code */
 }
 
+/* === Links === */
 .back {
     display: inline-block;
-    margin-top: 20px;
-    color: #007BFF;
+    margin-top: calc(var(--spacing-unit) * 1.25); /* 20px */
+    color: var(--primary-color);
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1.125rem; /* 18px */
+    transition: color var(--transition-speed) var(--transition-timing),
+                text-decoration var(--transition-speed) var(--transition-timing);
 }
 
-.back:hover {
+.back:hover,
+.back:focus { /* Added focus state */
     text-decoration: underline;
+    color: var(--primary-hover-color); /* Consistent hover effect */
+    outline: none;
 }
+/* Optional: for better keyboard navigation visibility */
+.back:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* === Utility Classes (Optional, but good practice) === */
+.text-center { /* If you remove text-align:center from body */
+    text-align: center;
+}
+
+.mb-1 { margin-bottom: var(--spacing-unit); }
+.mb-2 { margin-bottom: calc(var(--spacing-unit) * 2); }
+/* etc. */
