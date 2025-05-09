@@ -4,14 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EZCode - Home</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> <!-- Assuming style.css is the improved CSS -->
 </head>
 <body>
-    <header>
+
+    <header class="page-header"> {/* Consider a more specific class if you have multiple headers */}
         <h1>Welcome to EZCode</h1>
         <p>The easiest programming language for beginners.</p>
-        <a href="download.html" class="btn">Download EZCode</a>
-        <a href="guide.html" class="btn">Read the Full Guide</a>
+        <nav aria-label="Main site actions"> {/* Wrap primary actions/navigation in a nav element */}
+            <a href="download.html" class="btn">Download EZCode</a>
+            <a href="guide.html" class="btn">Read the Full Guide</a>
+        </nav>
     </header>
+
+    <!--
+        If you add more content to this page (e.g., features, testimonials),
+        it should ideally go within a <main> element.
+        For example:
+
+        <main>
+            <section id="features">
+                <h2>Features</h2>
+                <ul>
+                    <li>Easy to learn syntax</li>
+                    <li>Great for beginners</li>
+                    <li>Powerful enough for small projects</li>
+                </ul>
+            </section>
+
+            <section id="about">
+                <h2>About EZCode</h2>
+                <p>Learn more about the philosophy behind EZCode...</p>
+            </section>
+        </main>
+    -->
+
+    <!--
+        And you might also want a footer:
+
+        <footer>
+            <p>© <span id="current-year"></span> EZCode. All rights reserved.</p>
+            <script>
+                document.getElementById('current-year').textContent = new Date().getFullYear();
+            </script>
+        </footer>
+    -->
+
 </body>
 </html>
