@@ -48,11 +48,24 @@ body {
 }
 
 /* === Header === */
-header {
+.page-header { /* Changed from 'header' to '.page-header' */
     padding: calc(var(--spacing-unit) * 3) var(--spacing-unit); /* 48px 16px (approx) */
     background: var(--primary-color);
     color: var(--light-color);
     margin-bottom: calc(var(--spacing-unit) * 2); /* Space below header */
+}
+
+.page-header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Vertically align items if they have different heights */
+    margin-top: var(--spacing-unit); /* Space between header text and nav buttons */
+}
+
+.page-header nav .btn {
+    margin: 0 calc(var(--spacing-unit) / 2); /* Horizontal spacing, no vertical */
+    font-size: 1rem; /* Slightly smaller font for nav buttons, approx 16px */
+    padding: calc(var(--spacing-unit) * 0.5) var(--spacing-unit); /* 8px 16px, slightly smaller padding */
 }
 
 /* === Typography === */
@@ -144,3 +157,85 @@ pre {
 .mb-1 { margin-bottom: var(--spacing-unit); }
 .mb-2 { margin-bottom: calc(var(--spacing-unit) * 2); }
 /* etc. */
+
+/* === Main Content === */
+main {
+    padding: calc(var(--spacing-unit) * 2) 0; /* Vertical padding, no horizontal */
+    /* width: 100%; Ensure it takes up available width if not already by default */
+    /* max-width: 1200px; /* Optional: constrain width on very large screens */
+    /* margin: 0 auto; /* Center if max-width is set */
+}
+
+/* === Sections === */
+section {
+    margin-bottom: calc(var(--spacing-unit) * 2); /* Space between sections */
+    padding: 0 var(--spacing-unit); /* Horizontal padding for content within sections */
+}
+
+section h2 {
+    font-size: 2rem; /* Approx 32px */
+    margin-bottom: var(--spacing-unit); /* Space below section titles */
+    color: var(--primary-color); /* Optional: Use primary color for section titles */
+}
+
+/* Styling for the features list */
+#features ul {
+    list-style-position: inside; /* Bullets inside the content flow */
+    text-align: left; /* Align text to the left for readability */
+    /* To center the list block within the centered section: */
+    display: inline-block; /* Allows text-align:center on parent to center this block */
+    margin-bottom: var(--spacing-unit); /* Space below the entire list */
+    padding-left: 0; /* Reset padding as list-style-position:inside handles indent */
+}
+
+#features li {
+    margin-bottom: calc(var(--spacing-unit) / 2); /* Space between list items */
+    font-size: 1rem; /* Consistent with general paragraph text, or adjust if needed */
+    /* Color will inherit from body/section, which is --dark-text-color */
+}
+
+/* === Footer === */
+footer {
+    padding: calc(var(--spacing-unit) * 2) var(--spacing-unit);
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    text-align: center;
+    border-top: 1px solid #ccc; /* Or use a variable e.g., var(--border-color, #ccc) */
+    margin-top: calc(var(--spacing-unit) * 2); /* Space above footer */
+}
+
+footer p {
+    margin-bottom: 0; /* Remove default paragraph margin if footer is small */
+    font-size: 0.9rem; /* Slightly smaller text for footer */
+}
+
+/* === Responsive Adjustments === */
+@media (max-width: 600px) {
+    .page-header nav {
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: center; /* Center items when stacked */
+    }
+
+    .page-header nav .btn {
+        margin: calc(var(--spacing-unit) / 2) 0; /* Adjust margin for vertical stacking */
+        width: 80%; /* Optionally make buttons wider for easier tapping */
+        max-width: 300px; /* But not too wide */
+    }
+
+    h1 {
+        font-size: 2rem; /* Reduce h1 size on small screens */
+    }
+
+    section h2 {
+        font-size: 1.75rem; /* Reduce section header size */
+    }
+
+    p, #features li {
+        font-size: 0.95rem; /* Slightly reduce paragraph/list item font size */
+    }
+
+    .btn { /* General button adjustments for smaller screens */
+        font-size: 1.1rem;
+        padding: calc(var(--spacing-unit) * 0.5) var(--spacing-unit);
+    }
+}

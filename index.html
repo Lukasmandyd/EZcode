@@ -17,27 +17,29 @@
         </nav>
     </header>
 
-    <!--
-        If you add more content to this page (e.g., features, testimonials),
-        it should ideally go within a <main> element.
-        For example:
+    <main>
+        <section id="features">
+            <h2>Features</h2>
+            <ul>
+                <li>Simple, English-like syntax</li>
+                <li>Ideal for learning programming concepts</li>
+                <li>Cross-platform compatibility</li>
+                <li>Lightweight and fast execution</li>
+            </ul>
+        </section>
 
-        <main>
-            <section id="features">
-                <h2>Features</h2>
-                <ul>
-                    <li>Easy to learn syntax</li>
-                    <li>Great for beginners</li>
-                    <li>Powerful enough for small projects</li>
-                </ul>
-            </section>
+        <section id="about">
+            <h2>About EZCode</h2>
+            <p>EZCode was designed from the ground up to be an accessible and intuitive programming language for individuals taking their first steps into the world of coding. We believe that learning to program should be a fun and empowering experience, not a frustrating one. EZCode focuses on clear syntax and immediate feedback to help build confidence and understanding.</p>
+        </section>
+    </main>
 
-            <section id="about">
-                <h2>About EZCode</h2>
-                <p>Learn more about the philosophy behind EZCode...</p>
-            </section>
-        </main>
-    -->
+    <footer>
+        <p>© <span id="current-year"></span> EZCode. All rights reserved.</p>
+        <script>
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        </script>
+    </footer>
 
     <!--
         And you might also want a footer:
