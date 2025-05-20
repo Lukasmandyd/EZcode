@@ -22,6 +22,9 @@
     /* Transitions */
     --transition-speed: 0.2s;
     --transition-timing: ease-in-out;
+
+    /* Gradients */
+    --gradient-warm-sunset: linear-gradient(135deg, #ff9a9e, #fecfef);
 }
 
 /* Basic Reset & Box Sizing */
@@ -158,6 +161,45 @@ pre {
 .mb-2 { margin-bottom: calc(var(--spacing-unit) * 2); }
 /* etc. */
 
+.bg-warm-sunset {
+    background-image: var(--gradient-warm-sunset);
+}
+
+/* Text readability adjustments for body with warm-sunset background */
+body.bg-warm-sunset {
+    color: #545454; /* Darker grey for general text on light gradient */
+}
+
+.bg-warm-sunset h1,
+/* .bg-warm-sunset h2, -- Handled more specifically below */
+.bg-warm-sunset h3,
+.bg-warm-sunset h4,
+.bg-warm-sunset h5,
+.bg-warm-sunset h6 {
+    color: #333; /* Slightly darker for headings on light gradient */
+}
+
+/* More specific rule for h2, especially section h2, on gradient background */
+.bg-warm-sunset h2, /* General h2 on gradient */
+.bg-warm-sunset section h2 { /* Specific for section h2 on gradient, overrides default section h2 color */
+    color: #333;
+}
+
+/* Ensure page-header (which has its own background) text remains readable */
+body.bg-warm-sunset .page-header {
+    color: var(--light-color); /* Default, but explicit for clarity */
+}
+
+/* Style for non-button links on the warm-sunset background */
+.bg-warm-sunset a:not(.btn-modern):not(.btn) {
+    color: #0056b3; /* Darker blue for better contrast on light gradient */
+    text-decoration: underline; /* Ensure they are still identifiable as links */
+}
+
+.bg-warm-sunset a:not(.btn-modern):not(.btn):hover {
+    color: #003d80; /* Even darker on hover */
+}
+
 /* === Main Content === */
 main {
     padding: calc(var(--spacing-unit) * 2) 0; /* Vertical padding, no horizontal */
@@ -207,6 +249,38 @@ footer {
 footer p {
     margin-bottom: 0; /* Remove default paragraph margin if footer is small */
     font-size: 0.9rem; /* Slightly smaller text for footer */
+}
+
+/* === Modern Button Style === */
+.btn-modern {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #333; /* Dark text */
+    background-image: linear-gradient(to bottom, #ffffff, #f0f0f0); /* Subtle white/grey gradient */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-image 0.2s ease-in-out;
+    cursor: pointer;
+    /* Ensure it works with flex layouts in nav */
+    margin: 5px; /* Basic margin for spacing */
+}
+
+.btn-modern:hover, .btn-modern:focus {
+    background-image: linear-gradient(to bottom, #f0f0f0, #e0e0e0); /* Slightly darker on hover */
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+    transform: translateY(-2px);
+    outline: none;
+    color: #000; /* Ensure text is still readable */
+}
+
+.btn-modern:active {
+    transform: translateY(0px); /* Reset transform */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Smaller shadow for active state */
 }
 
 /* === Responsive Adjustments === */
